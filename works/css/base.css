@@ -1,0 +1,42 @@
+@charset "utf-8";
+body,p,ul,ol,h1,h2,h3,h4,input,form,dl,dd{
+	margin:0;
+	padding:0;
+}
+body{
+	font:14px/1.5 "Microsoft YaHei";
+	color:#333;
+	background-color: #F2F2F2;
+}
+img{
+	border:0;
+}
+ul,ol{
+	list-style: none;
+}
+a{
+	/* display: block; */
+	width: 100%;
+/* 	height: 100%; */
+	text-decoration: none;
+	color:#333;
+}
+/* 清除浮动 */
+.clearfix:after{
+	display: block;
+	content:"";
+	clear:both;
+}
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+.icolor{
+	color:red;
+	padding:0 5px;
+}
+/*  */
+
+

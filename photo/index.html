@@ -1,0 +1,138 @@
+
+
+ <html ><!--开始标签-->
+      <head><!--头部标签 给搜索引擎和浏览器看的-->
+	          <title>84期基础班--言心</title><!--网页标题-->
+              <meta charset="UTF-8"><!--charset字符集 uft-8 字符编码 解决乱码问题 万国码-->
+             <meta name="Keywords" content="18 期 84期基础班 言心">
+             <meta name="Description" content="84基础班  学习html+css">
+              <style type="text/css">
+			     *{
+				   margin:0;
+				   padding:0;
+				 }
+                 ul{
+				     list-style:none;
+				 }
+				 a{
+				     text-decoration:none;
+				 }
+				 body{
+					perspective:900px;
+					perspective-origin:top ;
+					background-color:black;
+				 }
+				 .wrap{
+					position:relative;
+					width:100px;
+					height:150px;
+					border:1px solid transparent;
+					margin:100px auto;
+					transform-style:preserve-3d;
+					animation:run 20s linear  infinite; 
+                     transform: rotateX(-15deg);
+				 }
+
+				 @keyframes run {
+				0% {
+					transform: rotateX(-15deg) rotateY(0deg)  ;
+					
+				}
+				100% {
+					transform: rotateX(-15deg) rotateY(360deg) ;
+					
+				}
+			}
+				 .box{
+					position:absolute;
+					width:100px;
+					height:150px;
+				 }
+				 .wrap:hover{
+					animation-play-state:paused;
+				 }
+				.wrap .one{
+					transform:rotateY(0deg) translateZ(300px);
+					background:url("images/1.jpg") no-repeat 0 0/ cover;		
+				 }
+				 .wrap .two{
+					transform:rotateY(30deg) translateZ(300px);
+					background:url("images/2.jpg") no-repeat 0 0/ cover;
+				
+				 }
+				 .wrap .three{
+					transform:rotateY(60deg) translateZ(300px);
+					background:url("images/3.jpg") no-repeat 0 0/ cover;
+					
+				 }
+				 .wrap .four{
+					transform:rotateY(90deg) translateZ(300px);
+					background:url("images/4.jpg") no-repeat 0 0/ cover;
+					
+				 }
+				  .wrap .five{
+					transform:rotateY(120deg) translateZ(300px);
+					background:url("images/5.jpg") no-repeat 0 0/ cover;
+					
+				 }
+				 .wrap .six{
+					transform:rotateY(150deg) translateZ(300px);
+					background:url("images/6.jpg") no-repeat 0 0/ cover;
+					
+				 }
+				 .wrap .seven{
+					transform:rotateY(180deg) translateZ(300px);
+					background:url("images/7.jpg") no-repeat 0 0/ cover;
+					
+				 }
+				.wrap .eight{
+					transform:rotateY(210deg) translateZ(300px);
+					background:url("images/8.jpg") no-repeat 0 0/ cover;
+					
+				 }
+				 .wrap .nine{
+					transform:rotateY(240deg) translateZ(300px);
+					background:url("images/9.jpg") no-repeat 0 0/ cover;
+					
+				 }
+				 .wrap .ten{
+					transform:rotateY(270deg) translateZ(300px);
+					background:url("images/10.jpg") no-repeat 0 0/ cover;
+				
+				 }
+				 .wrap .eleven{
+					transform:rotateY(300deg) translateZ(300px);
+					background:url("images/11.jpg") no-repeat 0 0/ cover;
+					
+				 }
+				 .wrap .twelve{
+					transform:rotateY(330deg) translateZ(300px);
+					background:url("images/12.jpg") no-repeat 0 0/ cover;
+					
+				 }
+				
+				 .wrap .one, .wrap .two, .wrap .three, .wrap .four, .wrap .five, .wrap .six, .wrap .seven, .wrap .eight, .wrap .nine, .wrap .ten,.wrap .eleven,.wrap .twelve{
+					-webkit-box-reflect:below 10px repeating-linear-gradient(0deg,transparent,black);
+				 }
+				 /* 本来想hover出现倒影的  算了 累了*/
+				 </style>
+ </head>
+ <body>
+			<div class="wrap">
+				<div class="box one"></div>
+				<div class="box two"></div>
+				<div class="box three"></div>
+				<div class="box four"></div>
+				<div class="box five"></div>
+				<div class="box six"></div>
+				<div class="box seven"></div>
+				<div class="box eight"></div>
+				<div class="box nine"></div>
+				<div class="box ten"></div>
+				<div class="box eleven"></div>
+				<div class="box twelve"></div>
+			</div>
+			
+ </body>
+</html>
+

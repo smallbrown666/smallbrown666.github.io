@@ -1,0 +1,324 @@
+@charset "utf-8";
+#content{
+	width: 1200px;
+	margin:0 auto;
+	padding-top:30px;
+	overflow: hidden;
+}
+#content .main-messger{
+	width: 75%;
+}
+#content .side-messger{
+	width: 23.5%;
+}
+/*   banner    */
+
+ .main-messger .banner{
+	position: relative;
+	height: 260px;
+ }
+  .main-messger .banner ol{
+	width: 100%;
+	height: 100%;
+  }
+  .main-messger .banner li{
+	position: absolute;
+	top:0;
+	left:0;
+	width: 100%;
+	height: 100%;
+  }
+  .main-messger .banner li img{
+		width: 100%;
+		height: 260px;
+  }
+/*     btn      */
+.banner .btn{
+	position: absolute;
+	left:50%;
+	bottom:0;
+	width: 64px;
+	height: 25px;
+	margin-left:-32px;
+	padding-top:10px;
+}
+ .btn span{
+	position: relative;
+	float: left;
+	width: 16px;
+	height: 16px;
+	margin-right:5px;
+	border-radius:50%;
+	/* background-color: #fff; */
+ }
+  .btn span:after{
+		position: absolute;
+		top:50%;
+		left:50%;
+		content:"";
+		width: 6px;
+		height: 6px;
+		margin-top:-5px;
+		margin-left:-5px;
+		border:2px solid yellow;
+		border-radius:50%;
+  }
+  .btn span:hover{
+	background-color: pink;
+  }
+   .btn span:hover::after{
+	border-color:red;
+	background-color: red;
+   }
+/* ----------  articles --------- */
+.main-messger .articles{
+	width: 100%;
+	margin:20px 0;
+	/* height: 500px; */
+	/* background-color: pink; */
+}
+.articles .easy ol{
+	display: flex;
+	height: 312px;
+}
+.articles .easy ol > li{
+	flex: 1 1 auto;
+	background-color: #fff;
+}
+.articles .easy ol > li > a{
+	display: block;
+	width: 255px;
+	margin: 15px auto;
+	overflow: hidden;
+}
+ .easy ol > li + li{
+	margin-left:10px;
+ }
+  .easy li p,
+  .easy li .peopleinfo{
+	width: 260px;
+	margin:5px auto;
+  }
+   .easy li .peopleinfo i{
+	font-size:13px;
+   }
+  .easy .maineasy{
+	margin-top:21px;
+	padding:15px;
+	background-color: #fff;
+  }
+   .easy .maineasy h2{
+		font-size:18px;
+		font-weight:normal;
+		border-bottom:1px solid #ccc;
+   }
+    .easy .maineasy h2:after{
+		display: block;
+		content:"";
+		width: 100px;
+		border:1px solid red;
+		transition:width 3s;
+	}
+.easy .maineasy h2:hover:after{
+	width: 200px;
+}
+.easy .maineasy h3{
+	padding:15px 0;
+}
+.easy .maineasy li{
+	padding:10px 0;
+	margin-bottom:10px;
+	border-bottom:2px dotted #ccc;
+}
+/* 最近文章里边的内容 */
+.main-easy-con .things{
+	overflow: hidden;
+}
+.main-easy-con .things dd{
+	float: left;
+}
+.main-easy-con .things dd:first-child img{
+	width: 150px;
+}
+.main-easy-con .things .bigeasy{
+	width: 710px;
+	padding-left:10px;
+}
+.main-easy-con .icons-img{
+display: block;
+	width: 300px;
+	margin: -35px 0 0 160px;	
+}
+.main-easy-con .icons-img img{
+	border:2px solid red;
+	border-radius:50%;
+	vertical-align: middle;
+}
+.main-easy-con .icons-img span{
+	padding: -5px 15px;
+	vertical-align: middle;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*   右侧信息栏   */
+
+/* 个人信息栏   */
+.side-messger .self-intro{
+	height: 240px;
+	padding:10px 20px;
+	background-color: #333;
+	border-radius:5px;
+}
+.side-messger .self-intro h2{
+	margin:10px 0;
+	color:#fff;
+}
+.side-messger .self-intro p{
+	color:#AED2D4;
+	font-size:14px;
+	padding-left:20px;
+	line-height: 28px;
+}
+.self-intro .linkmore{
+	margin-top:20px;
+}
+.self-intro .linkmore li{
+	float: left;
+	margin-left:10px;
+}
+.self-intro .linkmore a{
+	display: block;
+	width: 45px;
+	height: 45px;
+	font-size:36px;
+	text-align: center;
+	line-height: 45px;
+	color:red;
+	border:2px solid #fff;
+	border-radius:50%;
+	box-shadow:0 0 5px #fff inset;
+
+}
+/*   最近更新    */
+.side-messger  .update{
+	height: 260px;
+	margin-top:19px;
+	padding:25px 20px;
+	background-color: #fff;
+	border-radius:5px;
+}
+
+.update h2,
+.youlike h2,
+.siteinfo h2,
+.firendlink h2{
+	font-weight:normal;
+	border-bottom:1px solid #ccc;
+}
+.update > h2:after,
+.youlike > h2:after,
+.siteinfo > h2:after{
+	display: block;
+	content:"";
+	width: 100px;
+	border:1px solid red;
+	transition:width 2s;
+}
+.update > h2:hover::after,
+.youlike > h2:hover::after,
+.siteinfo > h2:hover::after,
+.firendlink > h2:hover::after{
+	width:200px;
+}
+.update ul{
+	padding-top:20px;
+}
+.update li{
+	position: relative;
+	height: 40px;
+	line-height: 40px;
+	margin-top:10px;
+	background-color: #eee;
+	border-radius:10px;
+	text-indent: 15px;
+	
+}
+.update li a{
+	display: block;
+	width: 222px;
+	padding:0 10px;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+}
+.update li:after{
+	position: absolute;
+	content:"";
+	width: 3px;
+	height: 3px;
+	background-color: #000;
+	left:15px;
+	top:20px;
+}
+.update li:hover{
+	box-shadow: 0 0 5px 3px #ccc;
+}
+/*   youlike    */
+.side-messger .youlike{
+	height: 260px;
+	margin-top:22px;
+	padding:25px 20px;
+	background-color: #fff;
+	border-radius:5px;
+}
+ .youlike .likeimg{
+	margin:10px auto;
+	max-height:110px;
+	overflow: hidden;
+ }
+  .likeimg img{
+	width: 100%;
+	transition: all 0.5s;
+  }
+    .likeimg img:hover{
+		opacity: .8;
+		transform:scale(1.2);
+	}
+/* 站点信息 */
+.siteinfo li{
+	margin:10px 0;
+}
+.siteinfo li a{
+	color:#f60;
+}
+.siteinfo .codeimg img{
+	width: 230px;
+}
+.side-messger .siteinfo,
+.side-messger .firendlink{
+	padding:20px;
+	margin-top:23px;
+	background-color: #fff;
+	border-radius:5px;
+}
+ .firendlink dl{
+	padding:15px 10px;
+ }
+
+
+
+
+
+

@@ -1,0 +1,90 @@
+@charset "utf-8";
+#header{
+	height: 60px;
+	color:#fff;
+	line-height: 55px;
+	background-color: #444;
+}
+#header:before{
+	position: relative;
+	display: block;
+	content:"";
+	height: 5px;
+	background: linear-gradient(to right,#FF3E63,#FBBDCB,#5856D6,#5AC8FA,#4ED776);
+}
+#header .nav{
+	width: 1200px;
+	margin: 0 auto 0;
+	height: 55px;
+	/* background-color: pink; */
+}
+/*      logo     */
+.login{
+	width: 150px;
+	height: 55px;
+	/* background-color: red; */
+}
+#header h2{
+	height: 55px;
+	font-weight:normal;
+}
+#header h2 > a{
+	color:#fff;
+}
+/*   导航栏主题内容    */
+.nav .navlist li{
+	float: left;
+	width: 100px;
+	height: 55px;
+	text-align: center;
+	font-size:16px;
+}
+.nav .navlist li > a{
+	color:#fff;
+}
+.nav .navlist li:nth-child(2){
+	position: relative;
+}
+.note-lists dd > a{
+	display: block;
+	width: 100px;
+	height: 35px;
+	line-height: 35px;
+	color:#fff;
+	background-color: #444;
+	border-bottom:2px solid #f60;
+}
+.navlist ul .note-lists{
+	position: absolute ;
+	top:55px;
+	left:0;
+	height: 0;
+	overflow: hidden;
+	font-size:14px;
+	z-index:999;
+	transition:1s;
+}
+.navlist .note:hover .note-lists{
+	height: 111px;
+}
+/*            搜索框css         */
+
+.nav form{
+	height: 55px;
+}
+.nav .search input{
+	width: 200px;
+	height: 30px;
+	outline:none;
+	padding:0 8px;
+	border-radius:15px;
+	border:1px solid #eee;
+	vertical-align: middle;
+}
+.nav .search label{
+	width: 40px;
+	height: 40px;
+	font-size:25px;
+	vertical-align: middle;
+}
+

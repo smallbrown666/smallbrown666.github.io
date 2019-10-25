@@ -1,0 +1,13 @@
+@charset "utf-8";
+#footer{
+	height: 200px;
+	background-color: #333;
+}
+#footer .footer-self{
+	width: 1200px;
+	margin:0 auto;
+	color:#fff;
+	font-size:28px;
+	line-height: 200px;
+	text-align: center;
+}
