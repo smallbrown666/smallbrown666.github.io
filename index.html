@@ -113,10 +113,9 @@
     <div class="article-content article-content-cloud" itemprop="articleBody">
       
         <p>在body标签里输入代码：</p>
-<p><button id = 'button'>按钮</p>
-<pre><code>&lt;div id = &apos;box&apos;&gt;&lt;/div&gt;</code></pre><p>​    /*</p>
+<p>​    /*</p>
 <p>​      使用EDU浏览器可以拿到数据，win10自带的浏览器，选择打开方式为EDU即可拿到你当前所在位置的经纬度</p>
-<p>​     </p>
+<p>​     console.log()即可</p>
 <p>​    */</p>
 <p>​    let button = document.getElementById(‘button’)</p>
 <p>​    let box = document.getElementById(‘box’)</p>
@@ -138,45 +137,12 @@
 <p>​          maximumAge:2000,</p>
 <p>​        })</p>
 <p>​      }</p>
-<p>  </script></p>
-<p>拿到经纬度后，再新建一个html文件</p>
-<p>输入内容：</p>
-<p>CSS  样式：</p>
-<pre><code>#container {
-    width:500px; 
-    height: 580px; 
-    margin: auto;
-    border: 1px solid skyblue;
-    }  </code></pre><h4 id="在script-标签中写入："><a href="#在script-标签中写入：" class="headerlink" title="在script  标签中写入："></a>在script  标签中写入：</h4><pre><code>    &lt;div id=&quot;container&quot;&gt;&lt;/div&gt; 
-    &lt;script type=&quot;text/javascript&quot; src=&quot;https://webapi.amap.com/maps?v=1.4.15&amp;key=您申请的key值&quot;&gt;&lt;/script&gt; 
-    var map = new AMap.Map(&apos;container&apos;);
-//     var map = new AMap.Map(&apos;container&apos;, {
-//     zoom:11,//级别
-//     center: [116.397428, 39.90923],//中心点坐标   这个就是你的经纬度坐标了 自己改吧
-//     viewMode:&apos;3D&apos;,//使用3D视图
-//     layers: [//使用多个图层
-//         new AMap.TileLayer.Satellite(),
-//         new AMap.TileLayer.RoadNet()
-//     ],
-// });
- var infoWindow = new AMap.InfoWindow({ //创建信息窗体
-    isCustom: true,  //使用自定义窗体
-    content:&apos;&lt;div&gt;信息窗体&lt;/div&gt;&apos;, //信息窗体的内容可以是任意html片段
-    offset: new AMap.Pixel(16, -45)
-});
-var onMarkerClick  =  function(e) {
-    infoWindow.open(map, e.target.getPosition());//打开信息窗体
-    //e.target就是被点击的Marker
-} 
-var marker = new AMap.Marker({
-     position: [116.481181, 39.989792]
-})
-map.add(marker);
-marker.on(&apos;click&apos;,onMarkerClick);//绑定click事件
-
-
-    &lt;!-- &lt;script type=&quot;text/javascript&quot; src=&quot;https://webapi.amap.com/maps?v=1.4.15&amp;key=您申请的key值&quot;&gt;</code></pre><p>详情请查看高德API官方文档！</p>
-<h3 id="转载请注明出处，谢谢！"><a href="#转载请注明出处，谢谢！" class="headerlink" title="转载请注明出处，谢谢！"></a>转载请注明出处，谢谢！</h3>
+<p>​</p>
+        
+          <p class="article-more-link">
+            <a href="/2019/11/10/%E9%AB%98%E5%BE%B7%E5%9C%B0%E5%9B%BEAPI/#more">阅读全文</a>
+          </p>
+        
       
     </div>
     
@@ -231,13 +197,12 @@ marker.on(&apos;click&apos;,onMarkerClick);//绑定click事件
 <p>cnpm install vue</p>
 <p>#全局安装 vue-cli</p>
 <p>cnpm install –global vue-cli</p>
-<p>创建一个基于webpack模板的新项目，项目名称为project</p>
-<p>vue init webpack project</p>
-<p>cd project</p>
-<p>cnmp install  //安装项目依赖</p>
-<p>cnpm run dev //运行项目</p>
-<p>成功执行以上命令后访问 ： localhost：8080  即可。</p>
-
+<p>​</p>
+        
+          <p class="article-more-link">
+            <a href="/2019/10/19/%E5%88%9D%E8%AF%86VUE/#more">阅读全文</a>
+          </p>
+        
       
     </div>
     
@@ -278,8 +243,7 @@ marker.on(&apos;click&apos;,onMarkerClick);//绑定click事件
     
     <div class="article-content article-content-cloud" itemprop="articleBody">
       
-        <pre><code>/*
-    1. 建立一个ajax函数 传入一个形参 json对象
+        <pre><code>    1. 建立一个ajax函数 传入一个形参 json对象
     2. 调用ajax函数  传入实参json
     3.var method = json.method || &apos;GET&apos;;
         var date = json.date || {};
@@ -290,7 +254,7 @@ marker.on(&apos;click&apos;,onMarkerClick);//绑定click事件
         3.send()    如果是POST  需要设置请求头！ 
         4.监听状态事件
 
-*/</code></pre><h4 id="在script-标签中写入："><a href="#在script-标签中写入：" class="headerlink" title="在script  标签中写入："></a>在script  标签中写入：</h4><pre><code>function ajax(json){
+&lt;!--more--&gt;</code></pre><h4 id="在script-标签中写入："><a href="#在script-标签中写入：" class="headerlink" title="在script  标签中写入："></a>在script  标签中写入：</h4><pre><code>function ajax(json){
     var method = json.method || &apos;GET&apos;;
     var date = json.date || {};
     var xhr = new XMLHttpRequest();

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wyzwy.com/"/>
-  <updated>2019-11-19T03:08:43.900Z</updated>
+  <updated>2019-11-19T09:02:22.167Z</updated>
   <id>http://wyzwy.com/</id>
   
   <author>
@@ -21,19 +21,38 @@
     <link href="http://wyzwy.com/2019/11/10/%E9%AB%98%E5%BE%B7%E5%9C%B0%E5%9B%BEAPI/"/>
     <id>http://wyzwy.com/2019/11/10/高德地图API/</id>
     <published>2019-11-10T00:24:21.000Z</published>
-    <updated>2019-11-19T03:08:43.900Z</updated>
+    <updated>2019-11-19T09:02:22.167Z</updated>
     
-    <content type="html"><![CDATA[<p>在body标签里输入代码：</p><p><button id = 'button'>按钮</p><pre><code>&lt;div id = &apos;box&apos;&gt;&lt;/div&gt;</code></pre><p>​    /*</p><p>​      使用EDU浏览器可以拿到数据，win10自带的浏览器，选择打开方式为EDU即可拿到你当前所在位置的经纬度</p><p>​     </p><p>​    */</p><p>​    let button = document.getElementById(‘button’)</p><p>​    let box = document.getElementById(‘box’)</p><p>​      button.onclick = function(){</p><p>​        navigator.geolocation.getCurrentPosition((position)=&gt;{</p><p>​          box.innerHTML += <code>经度:${position.coords.longitude}</code></p><p>​          box.innerHTML += <code>纬度:${position.coords.latitude}</code></p><p>​          box.innerHTML += <code>准确度:${position.coords.accuracy}</code></p><p>​          box.innerHTML += <code>海拔:${position.coords.altitude}</code></p><p>​          box.innerHTML += <code>海拔准确度:${position.coords.altitudeAcuracy}</code></p><p>​          box.innerHTML += <code>行进方向:${position.coords.heading}</code></p><p>​          box.innerHTML += <code>地面速度:${position.coords.speed}</code></p><p>​          box.innerHTML += <code>请求的时间:${new Date(position.timestamp)}</code></p><p>​        },function(err){</p><p>​          alert( err.code)</p><p>​        },{</p><p>​          enableHighAcuracy:false,</p><p>​          timeout:5000,</p><p>​          maximumAge:2000,</p><p>​        })</p><p>​      }</p><p>  </script></p><p>拿到经纬度后，再新建一个html文件</p><p>输入内容：</p><p>CSS  样式：</p><pre><code>#container {    width:500px;     height: 580px;     margin: auto;    border: 1px solid skyblue;    }  </code></pre><h4 id="在script-标签中写入："><a href="#在script-标签中写入：" class="headerlink" title="在script  标签中写入："></a>在script  标签中写入：</h4><pre><code>    &lt;div id=&quot;container&quot;&gt;&lt;/div&gt;     &lt;script type=&quot;text/javascript&quot; src=&quot;https://webapi.amap.com/maps?v=1.4.15&amp;key=您申请的key值&quot;&gt;&lt;/script&gt;     var map = new AMap.Map(&apos;container&apos;);//     var map = new AMap.Map(&apos;container&apos;, {//     zoom:11,//级别//     center: [116.397428, 39.90923],//中心点坐标   这个就是你的经纬度坐标了 自己改吧//     viewMode:&apos;3D&apos;,//使用3D视图//     layers: [//使用多个图层//         new AMap.TileLayer.Satellite(),//         new AMap.TileLayer.RoadNet()//     ],// }); var infoWindow = new AMap.InfoWindow({ //创建信息窗体    isCustom: true,  //使用自定义窗体    content:&apos;&lt;div&gt;信息窗体&lt;/div&gt;&apos;, //信息窗体的内容可以是任意html片段    offset: new AMap.Pixel(16, -45)});var onMarkerClick  =  function(e) {    infoWindow.open(map, e.target.getPosition());//打开信息窗体    //e.target就是被点击的Marker} var marker = new AMap.Marker({     position: [116.481181, 39.989792]})map.add(marker);marker.on(&apos;click&apos;,onMarkerClick);//绑定click事件    &lt;!-- &lt;script type=&quot;text/javascript&quot; src=&quot;https://webapi.amap.com/maps?v=1.4.15&amp;key=您申请的key值&quot;&gt;</code></pre><p>详情请查看高德API官方文档！</p><h3 id="转载请注明出处，谢谢！"><a href="#转载请注明出处，谢谢！" class="headerlink" title="转载请注明出处，谢谢！"></a>转载请注明出处，谢谢！</h3>]]></content>
+    <content type="html"><![CDATA[<p>在body标签里输入代码：</p><p>​    /*</p><p>​      使用EDU浏览器可以拿到数据，win10自带的浏览器，选择打开方式为EDU即可拿到你当前所在位置的经纬度</p><p>​     console.log()即可</p><p>​    */</p><p>​    let button = document.getElementById(‘button’)</p><p>​    let box = document.getElementById(‘box’)</p><p>​      button.onclick = function(){</p><p>​        navigator.geolocation.getCurrentPosition((position)=&gt;{</p><p>​          box.innerHTML += <code>经度:${position.coords.longitude}</code></p><p>​          box.innerHTML += <code>纬度:${position.coords.latitude}</code></p><p>​          box.innerHTML += <code>准确度:${position.coords.accuracy}</code></p><p>​          box.innerHTML += <code>海拔:${position.coords.altitude}</code></p><p>​          box.innerHTML += <code>海拔准确度:${position.coords.altitudeAcuracy}</code></p><p>​          box.innerHTML += <code>行进方向:${position.coords.heading}</code></p><p>​          box.innerHTML += <code>地面速度:${position.coords.speed}</code></p><p>​          box.innerHTML += <code>请求的时间:${new Date(position.timestamp)}</code></p><p>​        },function(err){</p><p>​          alert( err.code)</p><p>​        },{</p><p>​          enableHighAcuracy:false,</p><p>​          timeout:5000,</p><p>​          maximumAge:2000,</p><p>​        })</p><p>​      }</p><p>​        <a id="more"></a></p><p>拿到经纬度后，再新建一个html文件</p><p>输入内容：</p><p>CSS  样式：</p><pre><code>#container {    width:500px;     height: 580px;     margin: auto;    border: 1px solid skyblue;    }  </code></pre><h4 id="在script-标签中写入："><a href="#在script-标签中写入：" class="headerlink" title="在script  标签中写入："></a>在script  标签中写入：</h4><pre><code>    &lt;div id=&quot;container&quot;&gt;&lt;/div&gt;     &lt;script type=&quot;text/javascript&quot; src=&quot;https://webapi.amap.com/maps?v=1.4.15&amp;key=您申请的key值&quot;&gt;&lt;/script&gt;     var map = new AMap.Map(&apos;container&apos;);//     var map = new AMap.Map(&apos;container&apos;, {//     zoom:11,//级别//     center: [116.397428, 39.90923],//中心点坐标   这个就是你的经纬度坐标了 自己改吧//     viewMode:&apos;3D&apos;,//使用3D视图//     layers: [//使用多个图层//         new AMap.TileLayer.Satellite(),//         new AMap.TileLayer.RoadNet()//     ],// }); var infoWindow = new AMap.InfoWindow({ //创建信息窗体    isCustom: true,  //使用自定义窗体    content:&apos;&lt;div&gt;信息窗体&lt;/div&gt;&apos;, //信息窗体的内容可以是任意html片段    offset: new AMap.Pixel(16, -45)});var onMarkerClick  =  function(e) {    infoWindow.open(map, e.target.getPosition());//打开信息窗体    //e.target就是被点击的Marker} var marker = new AMap.Marker({     position: [116.481181, 39.989792]})map.add(marker);marker.on(&apos;click&apos;,onMarkerClick);//绑定click事件    &lt;!-- &lt;script type=&quot;text/javascript&quot; src=&quot;https://webapi.amap.com/maps?v=1.4.15&amp;key=您申请的key值&quot;&gt;</code></pre><p>详情请查看高德API官方文档！</p><h3 id="转载请注明出处，谢谢！"><a href="#转载请注明出处，谢谢！" class="headerlink" title="转载请注明出处，谢谢！"></a>转载请注明出处，谢谢！</h3>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;p&gt;在body标签里输入代码：&lt;/p&gt;
-&lt;p&gt;&lt;button id = &#39;button&#39;&gt;按钮&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;div id = &amp;apos;box&amp;apos;&amp;gt;&amp;lt;/div&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;​    /*&lt;/p&gt;
-&lt;p&gt;​
-      
+      &lt;p&gt;在body标签里输入代码：&lt;/p&gt;
+&lt;p&gt;​    /*&lt;/p&gt;
+&lt;p&gt;​      使用EDU浏览器可以拿到数据，win10自带的浏览器，选择打开方式为EDU即可拿到你当前所在位置的经纬度&lt;/p&gt;
+&lt;p&gt;​     console.log()即可&lt;/p&gt;
+&lt;p&gt;​    */&lt;/p&gt;
+&lt;p&gt;​    let button = document.getElementById(‘button’)&lt;/p&gt;
+&lt;p&gt;​    let box = document.getElementById(‘box’)&lt;/p&gt;
+&lt;p&gt;​      button.onclick = function(){&lt;/p&gt;
+&lt;p&gt;​        navigator.geolocation.getCurrentPosition((position)=&amp;gt;{&lt;/p&gt;
+&lt;p&gt;​          box.innerHTML += &lt;code&gt;经度:${position.coords.longitude}&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;​          box.innerHTML += &lt;code&gt;纬度:${position.coords.latitude}&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;​          box.innerHTML += &lt;code&gt;准确度:${position.coords.accuracy}&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;​          box.innerHTML += &lt;code&gt;海拔:${position.coords.altitude}&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;​          box.innerHTML += &lt;code&gt;海拔准确度:${position.coords.altitudeAcuracy}&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;​          box.innerHTML += &lt;code&gt;行进方向:${position.coords.heading}&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;​          box.innerHTML += &lt;code&gt;地面速度:${position.coords.speed}&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;​          box.innerHTML += &lt;code&gt;请求的时间:${new Date(position.timestamp)}&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;​        },function(err){&lt;/p&gt;
+&lt;p&gt;​          alert( err.code)&lt;/p&gt;
+&lt;p&gt;​        },{&lt;/p&gt;
+&lt;p&gt;​          enableHighAcuracy:false,&lt;/p&gt;
+&lt;p&gt;​          timeout:5000,&lt;/p&gt;
+&lt;p&gt;​          maximumAge:2000,&lt;/p&gt;
+&lt;p&gt;​        })&lt;/p&gt;
+&lt;p&gt;​      }&lt;/p&gt;
+&lt;p&gt;​&lt;/p&gt;
     
     </summary>
     
@@ -50,16 +69,27 @@
     <link href="http://wyzwy.com/2019/10/19/%E5%88%9D%E8%AF%86VUE/"/>
     <id>http://wyzwy.com/2019/10/19/初识VUE/</id>
     <published>2019-10-19T02:33:34.000Z</published>
-    <updated>2019-11-19T02:47:49.781Z</updated>
+    <updated>2019-11-19T09:02:24.375Z</updated>
     
-    <content type="html"><![CDATA[<h4 id="1-1-VUE简述"><a href="#1-1-VUE简述" class="headerlink" title="1.1 VUE简述"></a>1.1 VUE简述</h4><p>   Vue.js  是一套响应式系统，前端开发库。Vue自问世以来所受关注度不断提高，是非常流行的前端开发框架。</p><h4 id="1-2-Vue的主要特点"><a href="#1-2-Vue的主要特点" class="headerlink" title="1.2 Vue的主要特点"></a>1.2 Vue的主要特点</h4><p>  1.轻量级的框架</p><p>  2.双向数据绑定</p><p>  3.指令</p><p>  4.组件化</p><p>  5.客户端路由</p><p>  6.状态管理</p><h4 id="1-3-Vue的安装"><a href="#1-3-Vue的安装" class="headerlink" title="1.3 Vue的安装"></a>1.3 Vue的安装</h4><p>  #查看版本</p><p> 按下 win + r 键  输入cmd</p><p>输入指令 npm -v</p><p>#由于npm安装速度慢，因此可以使用淘宝镜像及其命令cnpm</p><p>cnpm install vue</p><p>#全局安装 vue-cli</p><p>cnpm install –global vue-cli</p><p>创建一个基于webpack模板的新项目，项目名称为project</p><p>vue init webpack project</p><p>cd project</p><p>cnmp install  //安装项目依赖</p><p>cnpm run dev //运行项目</p><p>成功执行以上命令后访问 ： localhost：8080  即可。</p>]]></content>
+    <content type="html"><![CDATA[<h4 id="1-1-VUE简述"><a href="#1-1-VUE简述" class="headerlink" title="1.1 VUE简述"></a>1.1 VUE简述</h4><p>   Vue.js  是一套响应式系统，前端开发库。Vue自问世以来所受关注度不断提高，是非常流行的前端开发框架。</p><h4 id="1-2-Vue的主要特点"><a href="#1-2-Vue的主要特点" class="headerlink" title="1.2 Vue的主要特点"></a>1.2 Vue的主要特点</h4><p>  1.轻量级的框架</p><p>  2.双向数据绑定</p><p>  3.指令</p><p>  4.组件化</p><p>  5.客户端路由</p><p>  6.状态管理</p><h4 id="1-3-Vue的安装"><a href="#1-3-Vue的安装" class="headerlink" title="1.3 Vue的安装"></a>1.3 Vue的安装</h4><p>  #查看版本</p><p> 按下 win + r 键  输入cmd</p><p>输入指令 npm -v</p><p>#由于npm安装速度慢，因此可以使用淘宝镜像及其命令cnpm</p><p>cnpm install vue</p><p>#全局安装 vue-cli</p><p>cnpm install –global vue-cli</p><p>​        <a id="more"></a></p><p>创建一个基于webpack模板的新项目，项目名称为project</p><p>vue init webpack project</p><p>cd project</p><p>cnmp install  //安装项目依赖</p><p>cnpm run dev //运行项目</p><p>成功执行以上命令后访问 ： localhost：8080  即可。</p>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;h4 id=&quot;1-1-VUE简述&quot;&gt;&lt;a href=&quot;#1-1-VUE简述&quot; class=&quot;headerlink&quot; title=&quot;1.1 VUE简述&quot;&gt;&lt;/a&gt;1.1 VUE简述&lt;/h4&gt;&lt;p&gt;   Vue.js  是一套响应式系统，前端开发库。Vue自问世以来所受关注度不断提
-      
+      &lt;h4 id=&quot;1-1-VUE简述&quot;&gt;&lt;a href=&quot;#1-1-VUE简述&quot; class=&quot;headerlink&quot; title=&quot;1.1 VUE简述&quot;&gt;&lt;/a&gt;1.1 VUE简述&lt;/h4&gt;&lt;p&gt;   Vue.js  是一套响应式系统，前端开发库。Vue自问世以来所受关注度不断提高，是非常流行的前端开发框架。&lt;/p&gt;
+&lt;h4 id=&quot;1-2-Vue的主要特点&quot;&gt;&lt;a href=&quot;#1-2-Vue的主要特点&quot; class=&quot;headerlink&quot; title=&quot;1.2 Vue的主要特点&quot;&gt;&lt;/a&gt;1.2 Vue的主要特点&lt;/h4&gt;&lt;p&gt;  1.轻量级的框架&lt;/p&gt;
+&lt;p&gt;  2.双向数据绑定&lt;/p&gt;
+&lt;p&gt;  3.指令&lt;/p&gt;
+&lt;p&gt;  4.组件化&lt;/p&gt;
+&lt;p&gt;  5.客户端路由&lt;/p&gt;
+&lt;p&gt;  6.状态管理&lt;/p&gt;
+&lt;h4 id=&quot;1-3-Vue的安装&quot;&gt;&lt;a href=&quot;#1-3-Vue的安装&quot; class=&quot;headerlink&quot; title=&quot;1.3 Vue的安装&quot;&gt;&lt;/a&gt;1.3 Vue的安装&lt;/h4&gt;&lt;p&gt;  #查看版本&lt;/p&gt;
+&lt;p&gt; 按下 win + r 键  输入cmd&lt;/p&gt;
+&lt;p&gt;输入指令 npm -v&lt;/p&gt;
+&lt;p&gt;#由于npm安装速度慢，因此可以使用淘宝镜像及其命令cnpm&lt;/p&gt;
+&lt;p&gt;cnpm install vue&lt;/p&gt;
+&lt;p&gt;#全局安装 vue-cli&lt;/p&gt;
+&lt;p&gt;cnpm install –global vue-cli&lt;/p&gt;
+&lt;p&gt;​&lt;/p&gt;
     
     </summary>
     
@@ -76,19 +106,18 @@
     <link href="http://wyzwy.com/2019/09/10/AJAX%E5%B0%81%E8%A3%85/"/>
     <id>http://wyzwy.com/2019/09/10/AJAX封装/</id>
     <published>2019-09-09T23:11:41.000Z</published>
-    <updated>2019-11-19T03:05:45.651Z</updated>
+    <updated>2019-11-19T09:00:24.123Z</updated>
     
-    <content type="html"><![CDATA[<pre><code>/*    1. 建立一个ajax函数 传入一个形参 json对象    2. 调用ajax函数  传入实参json    3.var method = json.method || &apos;GET&apos;;        var date = json.date || {};        设置默认值  的一个参数没有 就默认传入第二个    4.在ajax函数中创建ajax        1.实例化对象  创建ajax对象  xhl  XML   HTTP  Request        2.配置请求内容 open(&apos;GET/POST&apos;, url , ture)        3.send()    如果是POST  需要设置请求头！         4.监听状态事件*/</code></pre><h4 id="在script-标签中写入："><a href="#在script-标签中写入：" class="headerlink" title="在script  标签中写入："></a>在script  标签中写入：</h4><pre><code>function ajax(json){    var method = json.method || &apos;GET&apos;;    var date = json.date || {};    var xhr = new XMLHttpRequest();    //2 配置请求内容    switch(method){        case &apos;GET&apos;:            xhr.open(method , json.url+&apos;?&apos; + jsonUrl(json.date), true)            xhr.send(null)            break;        case &apos;POST&apos;:            xhr.open(method , json.url , true);            xhr.setRequestHeader( &apos;Content-type&apos; , &apos;application/x-www-form-urlencoded&apos; );            send(jsonUrl(json.date));            break;    }    xhr.onreadystatechange = function(){        if(xhr.readyState === 4){            if(xhr.status === 200 &amp;&amp; xhr.status &lt; 300 || xhr.status === 304){                json.success(xhr.responseText)            }else{                json.error(xhr.responseText)            }        }    }    function jsonUrl(date){        var arr = [];        for(var key in date){            arr.push(key + &apos;=&apos; + date[key])          }        return arr.join(&quot;&amp;&quot;)    }}    url: &apos;https://jsonplaceholder.typicode.com/posts&apos;,    method: &apos;GET&apos; ,    //这个date  就是 网址后面拼接的内容 一般是你的想要搜索的内容    date: {        userId:3,        neme:&quot;wangyu&quot;,    },    success:function(date){        console.log(date)    },    error:function(err){        consloe.log(err)    },})</code></pre><h3 id="转载请注明出处，谢谢！"><a href="#转载请注明出处，谢谢！" class="headerlink" title="转载请注明出处，谢谢！"></a>转载请注明出处，谢谢！</h3>]]></content>
+    <content type="html"><![CDATA[<pre><code>    1. 建立一个ajax函数 传入一个形参 json对象    2. 调用ajax函数  传入实参json    3.var method = json.method || &apos;GET&apos;;        var date = json.date || {};        设置默认值  的一个参数没有 就默认传入第二个    4.在ajax函数中创建ajax        1.实例化对象  创建ajax对象  xhl  XML   HTTP  Request        2.配置请求内容 open(&apos;GET/POST&apos;, url , ture)        3.send()    如果是POST  需要设置请求头！         4.监听状态事件&lt;!--more--&gt;</code></pre><h4 id="在script-标签中写入："><a href="#在script-标签中写入：" class="headerlink" title="在script  标签中写入："></a>在script  标签中写入：</h4><pre><code>function ajax(json){    var method = json.method || &apos;GET&apos;;    var date = json.date || {};    var xhr = new XMLHttpRequest();    //2 配置请求内容    switch(method){        case &apos;GET&apos;:            xhr.open(method , json.url+&apos;?&apos; + jsonUrl(json.date), true)            xhr.send(null)            break;        case &apos;POST&apos;:            xhr.open(method , json.url , true);            xhr.setRequestHeader( &apos;Content-type&apos; , &apos;application/x-www-form-urlencoded&apos; );            send(jsonUrl(json.date));            break;    }    xhr.onreadystatechange = function(){        if(xhr.readyState === 4){            if(xhr.status === 200 &amp;&amp; xhr.status &lt; 300 || xhr.status === 304){                json.success(xhr.responseText)            }else{                json.error(xhr.responseText)            }        }    }    function jsonUrl(date){        var arr = [];        for(var key in date){            arr.push(key + &apos;=&apos; + date[key])          }        return arr.join(&quot;&amp;&quot;)    }}    url: &apos;https://jsonplaceholder.typicode.com/posts&apos;,    method: &apos;GET&apos; ,    //这个date  就是 网址后面拼接的内容 一般是你的想要搜索的内容    date: {        userId:3,        neme:&quot;wangyu&quot;,    },    success:function(date){        console.log(date)    },    error:function(err){        consloe.log(err)    },})</code></pre><h3 id="转载请注明出处，谢谢！"><a href="#转载请注明出处，谢谢！" class="headerlink" title="转载请注明出处，谢谢！"></a>转载请注明出处，谢谢！</h3>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;pre&gt;&lt;code&gt;/*
-    1. 建立一个ajax函数 传入一个形参 json对象
+        &lt;pre&gt;&lt;code&gt;    1. 建立一个ajax函数 传入一个形参 json对象
     2. 调用ajax函数  传入实参json
     3.var method = json.method || &amp;apos;GET&amp;apos;;
-        var date 
+        var date = j
       
     
     </summary>

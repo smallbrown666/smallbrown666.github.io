@@ -12,15 +12,15 @@
   
   <meta name="keywords" content="前端实现 ,  实习小项目" />
   
-  <meta name="description" content="&#x2F;*     1. 建立一个ajax函数 传入一个形参 json对象     2. 调用ajax函数  传入实参json     3.var method = json.method || &amp;apos;GET&amp;apos;;         var date = json.date || {};         设置默认值  的一个参数没有 就默认传入第二个     4.在ajax函数中创建ajax">
+  <meta name="description" content="1. 建立一个ajax函数 传入一个形参 json对象     2. 调用ajax函数  传入实参json     3.var method = json.method || &amp;apos;GET&amp;apos;;         var date = json.date || {};         设置默认值  的一个参数没有 就默认传入第二个     4.在ajax函数中创建ajax">
 <meta name="keywords" content="AJAX文章">
 <meta property="og:type" content="article">
 <meta property="og:title" content="AJAX封装">
 <meta property="og:url" content="http:&#x2F;&#x2F;wyzwy.com&#x2F;2019&#x2F;09&#x2F;10&#x2F;AJAX%E5%B0%81%E8%A3%85&#x2F;index.html">
 <meta property="og:site_name" content="Ares丨明心见性">
-<meta property="og:description" content="&#x2F;*     1. 建立一个ajax函数 传入一个形参 json对象     2. 调用ajax函数  传入实参json     3.var method = json.method || &amp;apos;GET&amp;apos;;         var date = json.date || {};         设置默认值  的一个参数没有 就默认传入第二个     4.在ajax函数中创建ajax">
+<meta property="og:description" content="1. 建立一个ajax函数 传入一个形参 json对象     2. 调用ajax函数  传入实参json     3.var method = json.method || &amp;apos;GET&amp;apos;;         var date = json.date || {};         设置默认值  的一个参数没有 就默认传入第二个     4.在ajax函数中创建ajax">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-11-19T03:05:45.651Z">
+<meta property="og:updated_time" content="2019-11-19T09:00:24.123Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="Ares丨明心见性" type="application/atom+xml">
@@ -115,8 +115,7 @@
     
     <div class="article-content article-content-cloud" itemprop="articleBody">
       
-        <pre><code>/*
-    1. 建立一个ajax函数 传入一个形参 json对象
+        <pre><code>    1. 建立一个ajax函数 传入一个形参 json对象
     2. 调用ajax函数  传入实参json
     3.var method = json.method || &apos;GET&apos;;
         var date = json.date || {};
@@ -127,7 +126,7 @@
         3.send()    如果是POST  需要设置请求头！ 
         4.监听状态事件
 
-*/</code></pre><h4 id="在script-标签中写入："><a href="#在script-标签中写入：" class="headerlink" title="在script  标签中写入："></a>在script  标签中写入：</h4><pre><code>function ajax(json){
+&lt;!--more--&gt;</code></pre><h4 id="在script-标签中写入："><a href="#在script-标签中写入：" class="headerlink" title="在script  标签中写入："></a>在script  标签中写入：</h4><pre><code>function ajax(json){
     var method = json.method || &apos;GET&apos;;
     var date = json.date || {};
     var xhr = new XMLHttpRequest();
