@@ -12,15 +12,15 @@
   
   <meta name="keywords" content="前端实现 ,  实习小项目" />
   
-  <meta name="description" content="在body标签里输入代码： 获取JSON &amp;lt;div id = &amp;apos;box&amp;apos;&amp;gt;&amp;lt;&#x2F;div&amp;gt;   &amp;lt;script&amp;gt;​    &#x2F;* ​      使用EDU浏览器可以拿到数据，win10自带的浏览器，选择打开方式为EDU即可拿到你当前所在位置的经纬度 ​      ​    *&#x2F; ​    let button = document.getEleme">
+  <meta name="description" content="在body标签里输入代码： 按钮 &amp;lt;div id = &amp;apos;box&amp;apos;&amp;gt;&amp;lt;&#x2F;div&amp;gt;​    &#x2F;* ​      使用EDU浏览器可以拿到数据，win10自带的浏览器，选择打开方式为EDU即可拿到你当前所在位置的经纬度 ​      ​    *&#x2F; ​    let button = document.getElementById(‘button’) ​">
 <meta name="keywords" content="高德">
 <meta property="og:type" content="article">
 <meta property="og:title" content="高德地图API">
 <meta property="og:url" content="http:&#x2F;&#x2F;wyzwy.com&#x2F;2019&#x2F;11&#x2F;10&#x2F;%E9%AB%98%E5%BE%B7%E5%9C%B0%E5%9B%BEAPI&#x2F;index.html">
 <meta property="og:site_name" content="Ares丨明心见性">
-<meta property="og:description" content="在body标签里输入代码： 获取JSON &amp;lt;div id = &amp;apos;box&amp;apos;&amp;gt;&amp;lt;&#x2F;div&amp;gt;   &amp;lt;script&amp;gt;​    &#x2F;* ​      使用EDU浏览器可以拿到数据，win10自带的浏览器，选择打开方式为EDU即可拿到你当前所在位置的经纬度 ​      ​    *&#x2F; ​    let button = document.getEleme">
+<meta property="og:description" content="在body标签里输入代码： 按钮 &amp;lt;div id = &amp;apos;box&amp;apos;&amp;gt;&amp;lt;&#x2F;div&amp;gt;​    &#x2F;* ​      使用EDU浏览器可以拿到数据，win10自带的浏览器，选择打开方式为EDU即可拿到你当前所在位置的经纬度 ​      ​    *&#x2F; ​    let button = document.getElementById(‘button’) ​">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-11-19T02:48:14.629Z">
+<meta property="og:updated_time" content="2019-11-19T03:08:43.900Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="Ares丨明心见性" type="application/atom+xml">
@@ -116,11 +116,8 @@
     <div class="article-content article-content-cloud" itemprop="articleBody">
       
         <p>在body标签里输入代码：</p>
-<p><button id = 'button'>获取JSON</button></p>
-<pre><code>&lt;div id = &apos;box&apos;&gt;&lt;/div&gt;
-
-
-&lt;script&gt;</code></pre><p>​    /*</p>
+<p><button id = 'button'>按钮</p>
+<pre><code>&lt;div id = &apos;box&apos;&gt;&lt;/div&gt;</code></pre><p>​    /*</p>
 <p>​      使用EDU浏览器可以拿到数据，win10自带的浏览器，选择打开方式为EDU即可拿到你当前所在位置的经纬度</p>
 <p>​     </p>
 <p>​    */</p>
@@ -147,48 +144,41 @@
 <p>  </script></p>
 <p>拿到经纬度后，再新建一个html文件</p>
 <p>输入内容：</p>
-<style>
-        #container {
-            width:500px; 
-            height: 580px; 
-            margin: auto;
-            border: 1px solid skyblue;
-            }  
-    </style>
-<body>
-        <div id="container"></div> 
-        <script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.15&key=您申请的key值"></script> 
-        var map = new AMap.Map('container');
-    //     var map = new AMap.Map('container', {
-    //     zoom:11,//级别
-    //     center: [116.397428, 39.90923],//中心点坐标   这个就是你的经纬度坐标了 自己改吧
-    //     viewMode:'3D',//使用3D视图
-    //     layers: [//使用多个图层
-    //         new AMap.TileLayer.Satellite(),
-    //         new AMap.TileLayer.RoadNet()
-    //     ],
-    // });
-     var infoWindow = new AMap.InfoWindow({ //创建信息窗体
-        isCustom: true,  //使用自定义窗体
-        content:'<div>信息窗体</div>', //信息窗体的内容可以是任意html片段
-        offset: new AMap.Pixel(16, -45)
-    });
-    var onMarkerClick  =  function(e) {
-        infoWindow.open(map, e.target.getPosition());//打开信息窗体
-        //e.target就是被点击的Marker
-    } 
-    var marker = new AMap.Marker({
-         position: [116.481181, 39.989792]
-    })
-    map.add(marker);
-    marker.on('click',onMarkerClick);//绑定click事件
-
-<pre><code>&lt;/script&gt;
-    &lt;!-- &lt;script type=&quot;text/javascript&quot; src=&quot;https://webapi.amap.com/maps?v=1.4.15&amp;key=您申请的key值&quot;&gt;&lt;/script&gt;  --&gt;</code></pre></body>
+<p>CSS  样式：</p>
+<pre><code>#container {
+    width:500px; 
+    height: 580px; 
+    margin: auto;
+    border: 1px solid skyblue;
+    }  </code></pre><h4 id="在script-标签中写入："><a href="#在script-标签中写入：" class="headerlink" title="在script  标签中写入："></a>在script  标签中写入：</h4><pre><code>    &lt;div id=&quot;container&quot;&gt;&lt;/div&gt; 
+    &lt;script type=&quot;text/javascript&quot; src=&quot;https://webapi.amap.com/maps?v=1.4.15&amp;key=您申请的key值&quot;&gt;&lt;/script&gt; 
+    var map = new AMap.Map(&apos;container&apos;);
+//     var map = new AMap.Map(&apos;container&apos;, {
+//     zoom:11,//级别
+//     center: [116.397428, 39.90923],//中心点坐标   这个就是你的经纬度坐标了 自己改吧
+//     viewMode:&apos;3D&apos;,//使用3D视图
+//     layers: [//使用多个图层
+//         new AMap.TileLayer.Satellite(),
+//         new AMap.TileLayer.RoadNet()
+//     ],
+// });
+ var infoWindow = new AMap.InfoWindow({ //创建信息窗体
+    isCustom: true,  //使用自定义窗体
+    content:&apos;&lt;div&gt;信息窗体&lt;/div&gt;&apos;, //信息窗体的内容可以是任意html片段
+    offset: new AMap.Pixel(16, -45)
+});
+var onMarkerClick  =  function(e) {
+    infoWindow.open(map, e.target.getPosition());//打开信息窗体
+    //e.target就是被点击的Marker
+} 
+var marker = new AMap.Marker({
+     position: [116.481181, 39.989792]
+})
+map.add(marker);
+marker.on(&apos;click&apos;,onMarkerClick);//绑定click事件
 
 
-
-<p>详情请查看高德API官方文档！</p>
+    &lt;!-- &lt;script type=&quot;text/javascript&quot; src=&quot;https://webapi.amap.com/maps?v=1.4.15&amp;key=您申请的key值&quot;&gt;</code></pre><p>详情请查看高德API官方文档！</p>
 <h3 id="转载请注明出处，谢谢！"><a href="#转载请注明出处，谢谢！" class="headerlink" title="转载请注明出处，谢谢！"></a>转载请注明出处，谢谢！</h3>
       
     </div>

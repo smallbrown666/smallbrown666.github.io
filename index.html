@@ -113,11 +113,8 @@
     <div class="article-content article-content-cloud" itemprop="articleBody">
       
         <p>在body标签里输入代码：</p>
-<p><button id = 'button'>获取JSON</button></p>
-<pre><code>&lt;div id = &apos;box&apos;&gt;&lt;/div&gt;
-
-
-&lt;script&gt;</code></pre><p>​    /*</p>
+<p><button id = 'button'>按钮</p>
+<pre><code>&lt;div id = &apos;box&apos;&gt;&lt;/div&gt;</code></pre><p>​    /*</p>
 <p>​      使用EDU浏览器可以拿到数据，win10自带的浏览器，选择打开方式为EDU即可拿到你当前所在位置的经纬度</p>
 <p>​     </p>
 <p>​    */</p>
@@ -144,48 +141,41 @@
 <p>  </script></p>
 <p>拿到经纬度后，再新建一个html文件</p>
 <p>输入内容：</p>
-<style>
-        #container {
-            width:500px; 
-            height: 580px; 
-            margin: auto;
-            border: 1px solid skyblue;
-            }  
-    </style>
-<body>
-        <div id="container"></div> 
-        <script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.15&key=您申请的key值"></script> 
-        var map = new AMap.Map('container');
-    //     var map = new AMap.Map('container', {
-    //     zoom:11,//级别
-    //     center: [116.397428, 39.90923],//中心点坐标   这个就是你的经纬度坐标了 自己改吧
-    //     viewMode:'3D',//使用3D视图
-    //     layers: [//使用多个图层
-    //         new AMap.TileLayer.Satellite(),
-    //         new AMap.TileLayer.RoadNet()
-    //     ],
-    // });
-     var infoWindow = new AMap.InfoWindow({ //创建信息窗体
-        isCustom: true,  //使用自定义窗体
-        content:'<div>信息窗体</div>', //信息窗体的内容可以是任意html片段
-        offset: new AMap.Pixel(16, -45)
-    });
-    var onMarkerClick  =  function(e) {
-        infoWindow.open(map, e.target.getPosition());//打开信息窗体
-        //e.target就是被点击的Marker
-    } 
-    var marker = new AMap.Marker({
-         position: [116.481181, 39.989792]
-    })
-    map.add(marker);
-    marker.on('click',onMarkerClick);//绑定click事件
-
-<pre><code>&lt;/script&gt;
-    &lt;!-- &lt;script type=&quot;text/javascript&quot; src=&quot;https://webapi.amap.com/maps?v=1.4.15&amp;key=您申请的key值&quot;&gt;&lt;/script&gt;  --&gt;</code></pre></body>
+<p>CSS  样式：</p>
+<pre><code>#container {
+    width:500px; 
+    height: 580px; 
+    margin: auto;
+    border: 1px solid skyblue;
+    }  </code></pre><h4 id="在script-标签中写入："><a href="#在script-标签中写入：" class="headerlink" title="在script  标签中写入："></a>在script  标签中写入：</h4><pre><code>    &lt;div id=&quot;container&quot;&gt;&lt;/div&gt; 
+    &lt;script type=&quot;text/javascript&quot; src=&quot;https://webapi.amap.com/maps?v=1.4.15&amp;key=您申请的key值&quot;&gt;&lt;/script&gt; 
+    var map = new AMap.Map(&apos;container&apos;);
+//     var map = new AMap.Map(&apos;container&apos;, {
+//     zoom:11,//级别
+//     center: [116.397428, 39.90923],//中心点坐标   这个就是你的经纬度坐标了 自己改吧
+//     viewMode:&apos;3D&apos;,//使用3D视图
+//     layers: [//使用多个图层
+//         new AMap.TileLayer.Satellite(),
+//         new AMap.TileLayer.RoadNet()
+//     ],
+// });
+ var infoWindow = new AMap.InfoWindow({ //创建信息窗体
+    isCustom: true,  //使用自定义窗体
+    content:&apos;&lt;div&gt;信息窗体&lt;/div&gt;&apos;, //信息窗体的内容可以是任意html片段
+    offset: new AMap.Pixel(16, -45)
+});
+var onMarkerClick  =  function(e) {
+    infoWindow.open(map, e.target.getPosition());//打开信息窗体
+    //e.target就是被点击的Marker
+} 
+var marker = new AMap.Marker({
+     position: [116.481181, 39.989792]
+})
+map.add(marker);
+marker.on(&apos;click&apos;,onMarkerClick);//绑定click事件
 
 
-
-<p>详情请查看高德API官方文档！</p>
+    &lt;!-- &lt;script type=&quot;text/javascript&quot; src=&quot;https://webapi.amap.com/maps?v=1.4.15&amp;key=您申请的key值&quot;&gt;</code></pre><p>详情请查看高德API官方文档！</p>
 <h3 id="转载请注明出处，谢谢！"><a href="#转载请注明出处，谢谢！" class="headerlink" title="转载请注明出处，谢谢！"></a>转载请注明出处，谢谢！</h3>
       
     </div>
@@ -288,84 +278,77 @@
     
     <div class="article-content article-content-cloud" itemprop="articleBody">
       
-         <script>
-        /*
-            1. 建立一个ajax函数 传入一个形参 json对象
-            2. 调用ajax函数  传入实参json
-            3.var method = json.method || 'GET';
-                var date = json.date || {};
-                设置默认值  的一个参数没有 就默认传入第二个
-            4.在ajax函数中创建ajax
-                1.实例化对象  创建ajax对象  xhl  XML   HTTP  Request
-                2.配置请求内容 open('GET/POST', url , ture)
-                3.send()    如果是POST  需要设置请求头！  
-                4.监听状态事件
+        <pre><code>/*
+    1. 建立一个ajax函数 传入一个形参 json对象
+    2. 调用ajax函数  传入实参json
+    3.var method = json.method || &apos;GET&apos;;
+        var date = json.date || {};
+        设置默认值  的一个参数没有 就默认传入第二个
+    4.在ajax函数中创建ajax
+        1.实例化对象  创建ajax对象  xhl  XML   HTTP  Request
+        2.配置请求内容 open(&apos;GET/POST&apos;, url , ture)
+        3.send()    如果是POST  需要设置请求头！ 
+        4.监听状态事件
 
-        */
-        function ajax(json){
-            var method = json.method || 'GET';
-            var date = json.date || {};
-            var xhr = new XMLHttpRequest();
+*/</code></pre><h4 id="在script-标签中写入："><a href="#在script-标签中写入：" class="headerlink" title="在script  标签中写入："></a>在script  标签中写入：</h4><pre><code>function ajax(json){
+    var method = json.method || &apos;GET&apos;;
+    var date = json.date || {};
+    var xhr = new XMLHttpRequest();
 
-            //2 配置请求内容
-            switch(method){
-                case 'GET':
-                    xhr.open(method , json.url+'?' + jsonUrl(json.date), true)
-                    xhr.send(null)
-                    break;
-                case 'POST':
-                    xhr.open(method , json.url , true);
-                    xhr.setRequestHeader( 'Content-type' , 'application/x-www-form-urlencoded' );
-                    send(jsonUrl(json.date));
-                    break;
+    //2 配置请求内容
+    switch(method){
+        case &apos;GET&apos;:
+            xhr.open(method , json.url+&apos;?&apos; + jsonUrl(json.date), true)
+            xhr.send(null)
+            break;
+        case &apos;POST&apos;:
+            xhr.open(method , json.url , true);
+            xhr.setRequestHeader( &apos;Content-type&apos; , &apos;application/x-www-form-urlencoded&apos; );
+            send(jsonUrl(json.date));
+            break;
 
 
-            }
+    }
 
 
-            xhr.onreadystatechange = function(){
-                if(xhr.readyState === 4){
-                    if(xhr.status === 200 && xhr.status < 300 || xhr.status === 304){
-                        json.success(xhr.responseText)
-                    }else{
-                        json.error(xhr.responseText)
-                    }
-                }
-            }
-
-
-            function jsonUrl(date){
-                var arr = [];
-                for(var key in date){
-                    arr.push(key + '=' + date[key])  
-                }
-                return arr.join("&")
-
-
+    xhr.onreadystatechange = function(){
+        if(xhr.readyState === 4){
+            if(xhr.status === 200 &amp;&amp; xhr.status &lt; 300 || xhr.status === 304){
+                json.success(xhr.responseText)
+            }else{
+                json.error(xhr.responseText)
             }
         }
+    }
 
 
-            url: 'https://jsonplaceholder.typicode.com/posts',
-            method: 'GET' ,
-            //这个date  就是 网址后面拼接的内容 一般是你的想要搜索的内容
-            date: {
-                userId:3,
-                neme:"wangyu",
-            },
-            success:function(date){
-                console.log(date)
-            },
-            error:function(err){
-                consloe.log(err)
-            },
-
-        })
-    </script>
+    function jsonUrl(date){
+        var arr = [];
+        for(var key in date){
+            arr.push(key + &apos;=&apos; + date[key])  
+        }
+        return arr.join(&quot;&amp;&quot;)
 
 
+    }
+}
 
-<h3 id="转载请注明出处，谢谢！"><a href="#转载请注明出处，谢谢！" class="headerlink" title="转载请注明出处，谢谢！"></a>转载请注明出处，谢谢！</h3>
+
+    url: &apos;https://jsonplaceholder.typicode.com/posts&apos;,
+    method: &apos;GET&apos; ,
+    //这个date  就是 网址后面拼接的内容 一般是你的想要搜索的内容
+    date: {
+        userId:3,
+        neme:&quot;wangyu&quot;,
+    },
+    success:function(date){
+        console.log(date)
+    },
+    error:function(err){
+        consloe.log(err)
+    },
+
+})</code></pre><h3 id="转载请注明出处，谢谢！"><a href="#转载请注明出处，谢谢！" class="headerlink" title="转载请注明出处，谢谢！"></a>转载请注明出处，谢谢！</h3>
       
     </div>
     
